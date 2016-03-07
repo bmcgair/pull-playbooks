@@ -2,11 +2,8 @@
 
 - hosts: localhost
   connection: local
-  gather_facts: true
+  gather_facts: false
 
-  pre_tasks:
+  tasks:
     - name: install stress-ng
       apt: name=stress-ng state=latest force=yes
-
-  roles:
-    - users
